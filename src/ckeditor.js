@@ -23,6 +23,7 @@ import ImageUpload from '@ckeditor/ckeditor5-image/src/imageupload';
 import Indent from '@ckeditor/ckeditor5-indent/src/indent';
 import Link from '@ckeditor/ckeditor5-link/src/link';
 import List from '@ckeditor/ckeditor5-list/src/list';
+import Mathematics from 'ckeditor5-math/src/math';
 import MediaEmbed from '@ckeditor/ckeditor5-media-embed/src/mediaembed';
 import Paragraph from '@ckeditor/ckeditor5-paragraph/src/paragraph';
 import PasteFromOffice from '@ckeditor/ckeditor5-paste-from-office/src/pastefromoffice';
@@ -50,6 +51,7 @@ InlineEditor.builtinPlugins = [
 	Indent,
 	Link,
 	List,
+	Mathematics,
 	MediaEmbed,
 	Paragraph,
 	PasteFromOffice,
@@ -75,6 +77,7 @@ InlineEditor.defaultConfig = {
 			'imageUpload',
 			'blockQuote',
 			'insertTable',
+			'math',
 			'mediaEmbed',
 			'undo',
 			'redo'
@@ -96,5 +99,8 @@ InlineEditor.defaultConfig = {
 		]
 	},
 	// This value must be kept in sync with the language defined in webpack.config.js.
-	language: 'en'
+	language: 'en',
+	math: {
+		engine: 'katex'
+	}
 };
